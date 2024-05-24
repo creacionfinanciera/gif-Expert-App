@@ -81,6 +81,18 @@ Hay varias formas de desplegar en Github pages:
 1. Cambiarle el nombre a la capeta `dist` por `docs`, por lo que el archivo `.gitignore` esta ignorando `dist`
 2. Hacemos commit en git
 3. Subimos los cambios a github
+4. Vamos al repositorio en `github`, `settings`, `pages`
+5. Seleccionamos la rama `main` y la carpeta `/docs`, y boton `save`. Esto es rapido pero se podria demorar hasta 15 minutos en algunos casos, no podremos entrar hasta que el recuadro azul, aparezca en verde.
+6. Saco el link y cuando trate de abrirlo, me sale en blanco la página y unos errores:
+
+`Failed to load resource: the server responded with a status of 404 ()` => index-D2LwPvR8.js:1
+`Failed to load resource: the server responded with a status of 404 ()` => index-DQ2fAogY.css:1
+
+Y esto es porque no esta tomando el directorio de la carpeta dónde se encuentran estos dos archivos dentro de la carpeta `docs`, y lo podemos arreglar de dos maneras:
+
+1. Vamos al archivo `index.html` que se encuentra en la carpeta `docs` y corregimos agregando el punto a la dirección de los directorios:
+`<script type="module" crossorigin src="./assets/index-D2LwPvR8.js"></script>`
+`<link rel="stylesheet" crossorigin href="./assets/index-DQ2fAogY.css">`
 
 
 
