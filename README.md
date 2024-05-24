@@ -45,7 +45,7 @@ El `Build de producción` que vamos a hacer acá es lo que usualmente ustedes va
 2. Asegurense antes de hacer algún despliegue en producción asegurense de que su aplicación esté lista
 3. `control + c` => para cerrar la aplicación
 4. Cerrar la ventana del navegador
-5. Si previamente habiamos creado una carpeta `dist` de distribución para cualquier otra cosa, tenemos que eliminarla, y si nos fijamos en el archivo `.gitignore` esta carpeta tambien está ignorada, porque usualmente cualquier procedimiento que se ejecute, o cualquier archivo o carpeta que yo pueda generar mediante algún procedimiento, es decir, el `yarn build`, entonces no vale la pena tenerla en el repositorio, porque es código volatil, es decir, ya el día de mañana vuelvo hacer un 'build' y toda la información que esta en el repositorio no me interesa.
+5. Si previamente habiamos creado una carpeta `dist` de distribución para cualquier otra cosa, tenemos que eliminarla, y si nos fijamos en el archivo `.gitignore` esta carpeta tambien está ignorada, porque usualmente cualquier procedimiento que se ejecute, o cualquier archivo o carpeta que yo pueda generar mediante algún procedimiento, es decir, el `npm run build`, entonces no vale la pena tenerla en el repositorio, porque es código volatil, es decir, ya el día de mañana vuelvo hacer un 'build' y toda la información que esta en el repositorio no me interesa.
 6. Ahora, es diferente a manejar las versiones de producción, usualmente cuando ustedes suben alguna versión de su aplicación de React por ejemplo, lo que ustedes van a querer hacer es crear algun tipo de versión de producción que ya esta lista, o la versión que nosotros desplegamos, por si acaso la nueva versión salió mal, ustedes simplemente puedan regresar a otras versiones, pero eso ya es propio de git.
 7. Entonces, generamos la carpeta de distribución => `npm run build` y se genera automaticamente la carpeta `dist` en VSC
 8. Vamos al siguiente link => `https://www.netlify.com/`, es totalmente gratuita la parte del servicio para hacer aplicaciones o despliegue de aplicaciones que no tengan un `backend`, es decir, nosotros estamos creando aplicaciones de React y eso es puro `frontend`, y todo ese frontend lo podemos desplegar aqui sin ningún problema. Es muy buena para nosotros probar rapidamente nuestra aplicación de producción, es muy rápido, es más rápido inclusive que hacer el 'http server' que les mostré en la sección pasada. Que no tengan backend signfica que el servidor del backend de la aplicación no está corriendo en 'Netlify', esta corriendo en otro lugar.
@@ -93,6 +93,8 @@ Y esto es porque no esta tomando el directorio de la carpeta dónde se encuentra
 1. Vamos al archivo `index.html` que se encuentra en la carpeta `docs` y corregimos agregando el punto a la dirección de los directorios:
 `<script type="module" crossorigin src="./assets/index-D2LwPvR8.js"></script>`
 `<link rel="stylesheet" crossorigin href="./assets/index-DQ2fAogY.css">`
+2. Hacemos commit y push de nuevo
+3. Y esperamos que en Github desapareza un circulito amarillo que dice que esta procesando cambios de despliegue, cuando esta listo cambia a un `chulo verde`
 
 
 

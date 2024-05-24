@@ -4,7 +4,7 @@ export const getGifs = async(category) => {
 
     // importante colocar el principio el protocolo 'http://' porque la url viene de postman sin el protocolo
     // tambien al final sustituimos 'valorant' por la categoría    
-    const url = `http://api.giphy.com/v1/gifs/search?api_key=FBnLAWobSO8vIem6cIBErIKlw3wrEq8M&q=${ category }&limit=20`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=FBnLAWobSO8vIem6cIBErIKlw3wrEq8M&q=${ category }&limit=20`;
 
     // una vez tenemos el url vamos a hacer la petición http, y como es 'await', la función arriba debe ser 'async'
     const resp = await fetch( url );
